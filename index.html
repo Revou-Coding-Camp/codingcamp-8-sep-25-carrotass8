@@ -3,40 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Arrafi</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/script.js" defer></script>
+
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <h1 class="text-3xl font-bold">todo List</h1>
-    </header>
-    <main>
-        <form action="">
-            <input type="text" id="todo-input" class="border border-gray-300 rounded p-2 mb-2 w-full">
-            <input type="date" id="todo-date" class="border border-gray-300 rounded p-2 mb-2 w-full">
-            <button type="button" onclick="addTodo()" class="bg-blue-500 text-white rounded px-4 py-1 ml-2">Add</button>
-        </form>
-        <section>
-            <header>
-                <h2 class="text-2xl font-bold">Your todo</h2>
-            </header>
-            <ul class="mt-5" id="todo-list">
-                <li class="mb-2">Sample Task 1 - <span class="text-gray-500">2025-09-30</span></li>
-                <li class="mb-2">Sample Task 2 - <span class="text-gray-500">2025-10-05</span></li>
-            </ul>
-        </section>
+    <section id="main">
+        <header> To do list</header>
+        <nav>
+            <form>
+                <input type="text" name="todo" placeholder="Tambah Task">
+                <input type="date" name="date" placeholder="mm/dd//yyyy">
+                <button id="add" type="submit" name="add">Tambah</button>
+            </form>
+        </nav>
+        <nav>
+            <button class="delete-btn" name="delete_all">Hapus Semua</button>
+            <select id="filter" name="filter">
+                <option value="all">Semua Task</option>
+                <option value="pending">Pending</option>
+                <option value="done">Selesai</option>
+            </select>
 
-    </main>
+        </nav>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
 
-    <footer>
-        <p>&copy;September 2025 Adam Arrafi</p>
-    </footer>
-    <!-- Java Script -->
-    <script src="js/script.js"></script>
 </body>
 
 </html>
